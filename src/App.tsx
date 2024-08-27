@@ -38,14 +38,10 @@ function App() {
 
   }, [guessedLetters])
 
-
-  useEffect(() => {
-    console.log(correctGuess)
-  }, [correctGuess])
   return (
     <>
-      <div className="wrapper flex items-center">
-        <div className="display w-[40%] mx-auto text-5xl font-black text-center font-mono">
+      <div className="wrapper grid grid-cols-1 sm:grid-cols-2 sm:justify-center sm:items-center">
+        <div className="display mx-auto text-5xl font-black text-center font-mono">
           <p className={`pointer-events-none ${isLoser ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`}>
             {isWinner ? 'YOU WON!' : isLoser ? 'You Lose, NICE TRY!' : 'GUESS THE WORD BEFORE THE MAN HANGS!'}
           </p>
@@ -54,7 +50,7 @@ function App() {
           </button>
         </div>
 
-        <div className="game-container w-[40%] mx-auto mt-10 relative space-y-10">
+        <div className="game-container mx-auto mt-10 relative space-y-10">
           <div className="h-[15rem]">
             <div className="bg-black w-32 h-1 mx-auto relative left-[3.9rem]"></div>
             <div className="bg-black w-1 h-64 mx-auto"></div>
