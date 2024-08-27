@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className="wrapper grid grid-cols-1 sm:grid-cols-2 sm:justify-center sm:items-center">
+      <div className="wrapper grid mx-10 grid-cols-1 sm:grid-cols-2 sm:justify-center sm:items-center">
         <div className="display mx-auto text-5xl font-black text-center font-mono">
           <p className={`pointer-events-none ${isLoser ? 'bg-red-500 text-white' : 'bg-green-500 text-white'}`}>
             {isWinner ? 'YOU WON!' : isLoser ? 'You Lose, NICE TRY!' : 'GUESS THE WORD BEFORE THE MAN HANGS!'}
